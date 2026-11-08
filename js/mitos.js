@@ -1,3 +1,4 @@
+/* Script JavaScript do projeto Blue Sky */
 
 const btnAnterior = document.getElementById("btnAnterior");
 const btnProximo = document.getElementById("btnProximo");
@@ -8,9 +9,6 @@ const pergunta = document.getElementById("pergunta");
 const resposta = document.getElementById("resposta");
 
 const pontos = document.querySelectorAll(".ponto");
-
-
-// CONTEÚDOS DO CARROSSEL
 
 const conteudos = [
 
@@ -46,12 +44,10 @@ const conteudos = [
 
 let atual = 0;
 
-
-// MOSTRAR CONTEÚDO
-
 function mostrarConteudo() {
 
     imagem.src = conteudos[atual].imagem;
+    imagem.alt = "Imagem ilustrativa: " + conteudos[atual].pergunta;
 
     pergunta.textContent = conteudos[atual].pergunta;
 
@@ -64,12 +60,10 @@ function mostrarConteudo() {
         conteudos[atual].tipo === "Mito" ?
         "classificacao" : "classificacao verdade";
 
-
-    // ATUALIZAR BOLINHAS
-
     pontos.forEach((ponto, indice) => {
 
         ponto.classList.toggle("ativo", indice === atual);
+        ponto.setAttribute("aria-pressed", indice === atual ? "true" : "false");
 
     });
 
@@ -90,9 +84,6 @@ function proximo() {
 
 }
 
-
-// CONTEÚDO ANTERIOR
-
 function anterior() {
 
     atual--;
@@ -109,9 +100,6 @@ function anterior() {
 btnAnterior.addEventListener("click", anterior);
 
 btnProximo.addEventListener("click", proximo);
-
-
-// EVENTOS DAS BOLINHAS
 
 pontos.forEach((ponto, indice) => {
 

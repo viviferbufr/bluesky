@@ -1,3 +1,4 @@
+/* Script JavaScript do projeto Blue Sky */
 
 const pesquisa = document.getElementById("pesquisaTermo");
 const botaoLimpar = document.getElementById("limparPesquisa");
@@ -5,16 +6,12 @@ const mensagemVazia = document.getElementById("mensagemVazia");
 
 const itens = document.querySelectorAll(".item-pesquisa");
 const grupos = document.querySelectorAll(".grupo-dicionario");
-
-// Remove acentos e transforma o texto em minúsculo
 function normalizarTexto(texto) {
     return texto
         .toLowerCase()
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "");
 }
-
-// Pesquisa os termos
 function pesquisarTermos() {
 
     const textoPesquisa = normalizarTexto(pesquisa.value.trim());
@@ -34,8 +31,6 @@ function pesquisarTermos() {
         }
 
     });
-
-    // Esconde as categorias que não possuem resultados
     grupos.forEach(function(grupo) {
 
         const itensDoGrupo = grupo.querySelectorAll(".item-pesquisa");
@@ -47,16 +42,10 @@ function pesquisarTermos() {
         grupo.hidden = !possuiResultado;
 
     });
-
-    // Mostra mensagem quando não encontra nada
     mensagemVazia.hidden = quantidadeEncontrada > 0;
 
 }
-
-// Pesquisa enquanto o usuário digita
 pesquisa.addEventListener("input", pesquisarTermos);
-
-// Limpa a pesquisa
 botaoLimpar.addEventListener("click", function() {
 
     pesquisa.value = "";

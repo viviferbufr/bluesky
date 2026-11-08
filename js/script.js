@@ -1,9 +1,8 @@
+/* Script JavaScript do projeto Blue Sky */
 
 const formulario = document.getElementById("contato-form");
 const aviso = document.getElementById("aviso");
 const listaMensagens = document.getElementById("listaMensagens");
-
-// Busca as mensagens salvas no navegador
 function obterMensagens() {
     const dados = localStorage.getItem("mensagensBlueSky");
 
@@ -18,8 +17,6 @@ function obterMensagens() {
         return [];
     }
 }
-
-// Mostra as mensagens na página
 function mostrarMensagens() {
     const mensagens = obterMensagens();
 
@@ -76,8 +73,6 @@ function mostrarMensagens() {
         listaMensagens.appendChild(cartao);
     });
 }
-
-// Salva quando o formulário é enviado
 formulario.addEventListener("submit", function(evento) {
     evento.preventDefault();
 
@@ -120,6 +115,4 @@ formulario.addEventListener("submit", function(evento) {
             "Não foi possível salvar. Verifique o armazenamento do navegador.";
     }
 });
-
-// Carrega as mensagens ao abrir a página
 mostrarMensagens();

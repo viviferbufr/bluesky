@@ -28,6 +28,7 @@
         </header>
     
 
+    <main>
     <div class="titulo">
 
         <h1>Mitos e Verdades</h1>
@@ -42,18 +43,18 @@
     <div class="carrossel">
 
 
-        <button class="seta esquerda" id="btnAnterior">
+        <button type="button" class="seta esquerda" id="btnAnterior" aria-label="Conteúdo anterior">
             &#10094;
         </button>
 
 
-        <div class="conteudo">
+        <div class="conteudo" aria-live="polite">
 
             <div class="imagem">
 
                 <img id="imagem"
                 src="img/mitos/hi.png"
-                alt="">
+                alt="Ilustração sobre cuidados com a pele">
 
             </div>
 
@@ -78,24 +79,23 @@
 
         </div>
 
-        <button class="seta direita" id="btnProximo">
+        <button type="button" class="seta direita" id="btnProximo" aria-label="Próximo conteúdo">
             &#10095;
         </button>
 
     </div>
 
 
-    <div class="indicadores">
+    <div class="indicadores" aria-label="Navegação do carrossel">
 
-        <button class="ponto ativo"></button>
-        <button class="ponto"></button>
-        <button class="ponto"></button>
-        <button class="ponto"></button>
+        <button type="button" class="ponto ativo" aria-label="Mostrar conteúdo 1" aria-pressed="true"></button>
+        <button type="button" class="ponto" aria-label="Mostrar conteúdo 2" aria-pressed="false"></button>
+        <button type="button" class="ponto" aria-label="Mostrar conteúdo 3" aria-pressed="false"></button>
+        <button type="button" class="ponto" aria-label="Mostrar conteúdo 4" aria-pressed="false"></button>
 
     </div>
+    </main>
 
-
-        
         <footer class="footer">
             <p>Blue Sky</p>
             <p>Gmail: contato.bluesky@Gmail.com</p>
