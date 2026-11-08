@@ -1,0 +1,1990 @@
+/* Configuração geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Cabeçalho */
+.header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Logo no canto esquerdo */
+.logo {
+    position: absolute;
+    left: 10px;
+    width: 220px;
+    height: 95px;
+    max-width: 30%;
+    object-fit: contain;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-right: 40px;
+}
+nav a{
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    color: #75BCE8;
+    border: 2px solid #b8dff5;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+/* imagem do banner sem nada em cima vivi */
+.banner{
+    width: 100%;
+    height: 400px;
+    border-radius: 12px;
+    background-image:url(../img/Inicio/banner_sem_nuvem.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.retangulo-cartas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: min(1100px, calc(100% - 40px));
+    margin: 30px auto;
+}
+.cartas{
+    width: 100%;
+    min-width: 0;
+    min-height: 330px;
+    height: auto;
+    padding: 12px;
+    align-items: center;
+    background-color:#E8F5FF;
+    border-radius: 18px;
+    /* estudar melhor essa borda vivi */
+    border: 1px solid #1a8ddf;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+/* serve para dar animação para as cartas vivi */
+.cartas:hover {
+    transform: translateY(-10px);
+    border-color: #A9D4F0;
+    box-shadow: 0 5px 14px #00000020;
+}
+/* serve para deixar a foto em cima das letras vivi */
+.cartas img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+.cartas h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #043d66;
+}
+.cartas p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #78ACD1;
+}
+.footer{
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #78ACD1;
+    padding: 20px;
+    color:#fff;
+}
+/* Página de contato */
+.pagina-contato header {
+    border-bottom: 1px solid #B8DFF5;
+}
+.pagina-sobre header {
+    border-bottom: 1px solid #B8DFF5;
+}
+.contato-container {
+    width: 90%;
+    max-width: 850px;
+    margin: 55px auto;
+    color: #043D66;
+}
+.contato-container > h2 {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+.contato-container > p {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #52758F;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+/* Formulario */
+#contato-form {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #E8F5FF;
+    border: 1px solid #B8DFF5;
+    border-radius: 20px;
+    box-shadow: 0 5px 18px #00000010;
+}
+#contato-form label {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #043D66;
+    margin-top: 5px;
+}
+#contato-form input,
+#contato-form select,
+#contato-form textarea {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #B8DFF5;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    color: #043D66;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+#contato-form input:focus,
+#contato-form select:focus,
+#contato-form textarea:focus {
+    border-color: #1A8DDF;
+    box-shadow: 0 0 0 3px #75BCE833;
+}
+/* Campo inválido após interação */
+#contato-form input:focus:invalid,
+#contato-form select:focus:invalid,
+#contato-form textarea:focus:invalid {
+    border-color: #E57373;
+}
+/* Campo preenchido corretamente */
+#contato-form input:valid,
+#contato-form select:valid,
+#contato-form textarea:valid {
+    border-color: #75BCE8;
+}
+#contato-form textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+/* Botao */
+#contato-form button {
+    margin-top: 12px;
+    padding: 14px;
+    background-color: #1A8DDF;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+#contato-form button:hover {
+    background-color: #043D66;
+    transform: translateY(-2px);
+}
+/* Aviso do JavaScript */
+#aviso {
+    margin: 20px auto;
+    color: #043D66;
+    font-weight: bold;
+    text-align: center;
+}
+/* Mensagens salvas */
+.mensagens {
+    font-family: Arial, sans-serif;
+    max-width: 750px;
+    margin: 45px auto 0;
+}
+.mensagens h3 {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #043D66;
+}
+.mensagens p {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #52758F;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+.mensagem-card {
+    margin: 15px 0;
+    padding: 22px;
+    background-color: #FFFFFF;
+    border: 1px solid #A9D4F0;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px #00000010;
+    overflow-wrap: anywhere;
+}
+.mensagem-card p {
+    margin: 9px 0;
+    line-height: 1.5;
+    color: #043D66;
+}
+.mensagem-card button {
+    margin-top: 12px;
+    padding: 10px 16px;
+    background-color: #75BCE8;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.mensagem-card button:hover {
+    background-color: #043D66;
+}
+/* Centraliza a mensagem quando não há mensagens salvas */
+#listaMensagens {
+    text-align: center;
+    margin-top: 35px;
+}
+/* Espaço entre o título e a área das mensagens */
+.mensagens {
+    margin-top: 50px;
+}
+/* Aparência do aviso de lista vazia */
+#listaMensagens:empty {
+    margin-top: 35px;
+}
+/* ==================================================
+   PÁGINA: TIPOS DE PELE
+   ================================================== */
+.bannerT{
+    background-image:url(../img/Tipos_de_Pele/banner.jpg) ;
+    width: auto;
+    height: 400px ;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bannerT h1{
+   margin-bottom: 30px;
+   padding-top: 35px;
+    text-decoration: none;
+    color: #043d66;
+}
+.bannerT h3{
+    color: #497fa7;
+    padding-top: 35px;
+}
+.botao{
+    padding: 20px;
+    margin-top: 100px;
+    border-radius: 24px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #B8DFF5;
+    background-color: #0a67aa;
+    transition: transform 0.3s ease;
+}
+.botao:hover{
+    transform: translateY(-10px);
+    border: 3px solid;
+    border-color: #75BCE8;
+    box-shadow: 0 5px 14px #00000020;
+}
+.identificacao {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
+    background-color: #94c1e0;
+    border-radius: 20px;
+    min-height: 330px;
+    width: 100%;
+    height: auto;
+}
+.identificacao img {
+    display: block;
+    width: 100%;
+    max-width: 430px;
+    max-height: 330px;
+    height: auto;
+    margin-left: 0;
+    object-fit: contain;
+}
+.texto {
+    min-width: 0;
+    flex: 1;
+}
+.texto h1 {
+    padding-left: 0;
+    margin: 30px 0;
+    color: #043D66;
+}
+.texto h3 {
+    color: #032944;
+    padding-left: 0;
+    font-size: 16px;
+}
+.texto ol {
+    color: #032944;
+    margin: 30px 0;
+    font-size: 18px;
+    padding-left: 24px;
+}
+/* Parte principal dos tipos de pele */
+.principal-tipos-pele {
+    width: 100%;
+    padding: 45px 35px;
+    background-color: #f0f9ff;
+    text-align: center;
+}
+/* Título principal */
+.principal-tipos-pele h2 {
+    color: #075078;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+/* Subtítulo */
+.subtitulo-pele {
+    color: #75a9d1;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+/* Organização dos cartões */
+.cartoes-pele {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+}
+/* Cada cartão */
+.cartao-pele {
+    flex: 1;
+    min-width: 0;
+    background-color: white;
+    border: 2px solid #b8dff5;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 5px 14px #00000015;
+    transition: transform 0.3s;
+}
+/* Efeito ao passar o mouse */
+.cartao-pele:hover {
+    transform: translateY(-5px);
+}
+/* Imagens */
+.cartao-pele img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+/* Títulos dos cartões */
+.cartao-pele h3 {
+    color: #318bc4;
+    font-size: 20px;
+    margin: 15px 0 10px;
+}
+/* Descrições */
+.cartao-pele p {
+    color: #52758d;
+    font-size: 15px;
+    line-height: 1.5;
+}
+/* ==================================================
+   PÁGINA: TEXTURAS
+   ================================================== */
+body{
+    font-family: Arial, Helvetica, sans-serif
+}
+.Texturas {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    margin: 30px 0;
+    background-color: #78ACD1;
+    border-radius: 20px;
+}
+.Texturas video{
+    border-radius: 30px;
+}
+.Texturasd video{
+    border-radius: 30px;
+}
+.Texturasd {
+    flex-direction: row-reverse;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    margin: 30px 0;
+    background-color:#a6d8f5;
+    border-radius: 15px;
+}
+.texturah1ep{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+}
+.texturah1ep h2{
+    text-align: center;
+    margin: 20px;
+    color: #043D66;
+}
+.texturah1ep p{
+    font-size:large;
+    color: #043D66;
+}
+.sobre-apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 30px;
+}
+.sobre-texto {
+    flex: 1;
+}
+.sobre-texto h1 {
+    color: #043D66;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+.sobre-texto p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+.sobre-imagem {
+    flex: 1;
+    text-align: center;
+}
+.sobre-imagem img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+}
+/* ==================================================
+   PÁGINA: SOBRE NÓS
+   ================================================== */
+/* Nossa missão */
+.sobre-missao {
+    background-color: #E8F5FF;
+    padding: 45px 25px;
+    text-align: center;
+}
+.sobre-missao h2,
+.equipe h2 {
+    color: #043D66;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.sobre-missao p {
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 16px;
+}
+/* EQUIPE */
+.equipe {
+    padding: 50px 25px;
+    text-align: center;
+}
+.subtitulo {
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+.integrantes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 800px;
+    margin: 30px auto;
+}
+.integrante {
+    background-color: #FFFFFF;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px #00000010;
+}
+.integrante img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.integrante h3 {
+    color: #043D66;
+    margin: 20px 0 12px;
+}
+.integrante p {
+    line-height: 1.7;
+    font-size: 15px;
+}
+/* ==================================================
+   PÁGINA: MITOS E VERDADES
+   ================================================== */
+body {
+    background-color: #F2F9FD;
+    font-family: Arial, sans-serif;
+    color: #174675;
+}
+.titulo {
+    padding: 50px 8% 30px;
+}
+.titulo h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #174675;
+}
+.titulo p {
+    font-size: 19px;
+    color: #6485A3;
+}
+.carrossel {
+    width: 85%;
+    max-width: 1250px;
+    margin: 20px auto;
+    position: relative;
+}
+.conteudo {
+    display: flex;
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    min-height: 430px;
+    box-shadow: 0 8px 25px #00000015;
+}
+.imagem {
+    width: 55%;
+}
+.imagem img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    display: block;
+}
+.informacao {
+    width: 45%;
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.classificacao {
+    background-color: #E87989;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    width: fit-content;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.verdade {
+    background-color: #65BFA0;
+}
+.informacao h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #174675;
+}
+.informacao p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #6485A3;
+}
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    color: #174675;
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: 0 3px 12px #00000020;
+    transition: 0.3s;
+}
+.seta:hover {
+    background-color: #DDF1FF;
+    transform: translateY(-50%) scale(1.1);
+}
+.esquerda {
+    left: -25px;
+}
+.direita {
+    right: -25px;
+}
+/* Indicadores */
+.indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 30px;
+}
+.ponto {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: none;
+    background-color: #B9D3E8;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.ponto.ativo {
+    background-color: #55AEE0;
+    width: 28px;
+    border-radius: 20px;
+}
+/* =================================
+   DICIONÁRIO DA PELE
+   ================================= */
+.pagina-dicionario {
+    width: 100%;
+    padding-bottom: 40px;
+}
+/* TÍTULO E INTRODUÇÃO */
+.dicionario-introducao {
+    max-width: 850px;
+    width: calc(100% - 40px);
+    margin: 65px auto 45px;
+    text-align: center;
+}
+.dicionario-introducao span {
+    color: #1A8DDF;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.dicionario-introducao h1 {
+    color: #043D66;
+    font-size: 38px;
+    margin: 12px 0;
+}
+.dicionario-introducao p {
+    color: #5C7180;
+    font-size: 16px;
+    line-height: 1.7;
+}
+/* PESQUISA */
+.dicionario-pesquisa {
+    max-width: 750px;
+    width: calc(100% - 40px);
+    margin: 0 auto 65px;
+    text-align: center;
+}
+.dicionario-pesquisa h2 {
+    color: #043D66;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.dicionario-pesquisa p {
+    color: #6B7D89;
+    margin-bottom: 22px;
+}
+.campo-pesquisa {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.campo-pesquisa input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px 18px;
+    border: 1px solid #B8DFF5;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    background: #FFFFFF;
+    color: #043D66;
+}
+.campo-pesquisa input:focus {
+    border-color: #1A8DDF;
+    box-shadow: 0 0 0 3px #75BCE830;
+}
+.campo-pesquisa button {
+    padding: 15px 22px;
+    border: none;
+    border-radius: 10px;
+    background: #043D66;
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.campo-pesquisa button:hover {
+    background: #1A8DDF;
+}
+/* SEÇÕES */
+.grupo-dicionario {
+    max-width: 1100px;
+    width: calc(100% - 40px);
+    margin: 0 auto 65px;
+}
+.titulo-categoria {
+    margin-bottom: 25px;
+}
+.titulo-categoria h2 {
+    color: #043D66;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+.titulo-categoria p {
+    color: #6B7D89;
+    line-height: 1.6;
+}
+/* CARDS DOS TERMOS */
+.grade-termos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+.card-termo {
+    position: relative;
+    padding: 28px;
+    background: #FFFFFF;
+    border: 1px solid #DCEFFC;
+    border-radius: 15px;
+    box-shadow: 0 4px 14px #043D6610;
+    transition: 0.3s;
+}
+.card-termo:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 20px #043D661C;
+    border-color: #A9D4F0;
+}
+.numero-card {
+    display: inline-block;
+    margin-bottom: 13px;
+    padding: 6px 11px;
+    border-radius: 20px;
+    background: #E8F5FF;
+    color: #1A8DDF;
+    font-size: 12px;
+    font-weight: bold;
+}
+.card-termo h3 {
+    color: #043D66;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.card-termo p {
+    color: #5C7180;
+    font-size: 14px;
+    line-height: 1.7;
+}
+/* TABELA DE INGREDIENTES EM FORMATO DE CARDS */
+.tabela-cards {
+    width: 100%;
+}
+.tabela-ingredientes {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+/* Mantém os títulos das colunas na estrutura da tabela,
+   sem ocupar espaço visual nos cards. */
+.tabela-ingredientes thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+.tabela-ingredientes tbody {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+.tabela-ingredientes tbody tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 28px;
+    background: #FFFFFF;
+    border: 1px solid #DCEFFC;
+    border-radius: 15px;
+    box-shadow: 0 4px 14px #043D6610;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.tabela-ingredientes tbody tr:hover {
+    transform: translateY(-4px);
+    border-color: #A9D4F0;
+    box-shadow: 0 7px 20px #043D661C;
+}
+.tabela-ingredientes td {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: #5C7180;
+    font-size: 13px;
+    line-height: 1.5;
+}
+.tabela-ingredientes td::before {
+    content: attr(data-label);
+    color: #1A8DDF;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.tabela-ingredientes td strong {
+    color: #043D66;
+    font-size: 17px;
+}
+/* MENSAGEM DE PESQUISA */
+.mensagem-vazia {
+    max-width: 750px;
+    width: calc(100% - 40px);
+    margin: 0 auto 50px;
+    padding: 25px;
+    text-align: center;
+    color: #34566D;
+    background: #E8F5FF;
+    border-radius: 12px;
+    line-height: 1.6;
+}
+/* SEÇÃO FINAL */
+.dicionario-final {
+    max-width: 850px;
+    width: calc(100% - 40px);
+    margin: 70px auto 30px;
+    padding: 40px 25px;
+    text-align: center;
+    background: #E8F5FF;
+    border-radius: 18px;
+}
+.dicionario-final h2 {
+    color: #043D66;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+.dicionario-final p {
+    color: #5C7180;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+.dicionario-final a {
+    display: inline-block;
+    padding: 13px 22px;
+    background: #043D66;
+    color: #FFFFFF;
+    border-radius: 9px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.dicionario-final a:hover {
+    background: #1A8DDF;
+}
+/* RESPONSIVIDADE */
+@media (max-width: 700px) {
+    .dicionario-introducao {
+        margin-top: 40px;
+    }
+    .dicionario-introducao h1 {
+        font-size: 30px;
+    }
+    .dicionario-pesquisa h2 {
+        font-size: 21px;
+    }
+    .grade-termos {
+        grid-template-columns: 1fr;
+    }
+    .tabela-ingredientes tbody {
+        grid-template-columns: 1fr;
+    }
+    .card-termo {
+        padding: 23px;
+    }
+    .dicionario-final {
+        padding: 30px 20px;
+    }
+}
+/* ==================================================
+   PÁGINA: GUIA DE SKINCARE — BLUE SKY
+   ========================================== */
+/* BANNER */
+.guia-banner {
+    min-height: 380px;
+    background:
+    linear-gradient(to top, rgba(4, 61, 102, 0.95), rgba(4, 61, 102, 0.45)),
+    url("../img/guia/banner-guia.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 50px 9%;
+}
+.guia-banner-texto {
+    max-width: 550px;
+    color: white;
+}
+.guia-banner-texto span,
+.guia-audio-conteudo span {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.guia-banner h1 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+.guia-banner p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+.guia-botao {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 13px 25px;
+    background: white;
+    color: #043D66;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.guia-botao:hover {
+    background: #B8DFF5;
+    transform: translateY(-3px);
+}
+/* INTRODUÇÃO */
+.guia-introducao {
+    max-width: 850px;
+    margin: 65px auto;
+    padding: 0 25px;
+    text-align: center;
+}
+.guia-introducao h2,
+.guia-passos h2,
+.guia-tabela h2,
+.guia-dicas h2,
+.guia-explorar h2 {
+    color: #043D66;
+    font-size: 29px;
+    text-align: center;
+}
+.guia-introducao p {
+    color: #555;
+    line-height: 1.9;
+    font-size: 16px;
+}
+/* PASSOS ESSENCIAIS */
+.guia-passos {
+    padding: 45px 7%;
+    background: #E8F5FF;
+}
+.guia-subtitulo {
+    text-align: center;
+    color: #657D8D;
+    margin: 15px 0 35px;
+    line-height: 1.7;
+}
+.guia-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    max-width: 1150px;
+    margin: auto;
+}
+.guia-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #00000010;
+    transition: 0.3s;
+}
+.guia-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px #00000020;
+}
+.guia-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+.guia-card div {
+    padding: 20px;
+}
+.guia-card span {
+    color: #1A8DDF;
+    font-weight: bold;
+    font-size: 14px;
+}
+.guia-card h3 {
+    color: #043D66;
+    margin: 10px 0;
+    font-size: 20px;
+}
+.guia-card p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 14px;
+}
+/* TABELA */
+.guia-tabela {
+    padding: 65px 7%;
+}
+.tabela-responsiva {
+    max-width: 1000px;
+    margin: auto;
+    overflow-x: auto;
+}
+.guia-tabela table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    text-align: center;
+}
+.guia-tabela th {
+    background: #75BCE8;
+    color: #043D66;
+    padding: 18px;
+}
+.guia-tabela td {
+    padding: 17px;
+    border-bottom: 1px solid #DCEBF5;
+    color: #555;
+    line-height: 1.6;
+}
+.guia-tabela td:first-child {
+    font-weight: bold;
+    color: #043D66;
+}
+.guia-tabela tr:hover td {
+    background: #E8F5FF;
+}
+/* DICAS */
+.guia-dicas {
+    background: #E8F5FF;
+    padding: 60px 7%;
+}
+.guia-dicas-lista {
+    max-width: 850px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.guia-dica {
+    background: white;
+    padding: 18px 22px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 3px 10px #00000008;
+}
+.guia-dica span {
+    color: #1A8DDF;
+    font-weight: bold;
+    font-size: 18px;
+}
+.guia-dica p {
+    color: #555;
+    line-height: 1.6;
+}
+/* ÁUDIO */
+.guia-audio {
+    padding: 65px 20px;
+    background: linear-gradient(135deg, #75BCE8, #E8F5FF);
+}
+.guia-audio-conteudo {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px #00000010;
+}
+.guia-audio-conteudo span {
+    color: #1A8DDF;
+}
+.guia-audio-conteudo h2 {
+    color: #043D66;
+    font-size: 27px;
+    margin: 15px 0;
+}
+.guia-audio-conteudo p {
+    color: #657D8D;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+.guia-audio audio {
+    width: 100%;
+    max-width: 450px;
+}
+/* CONTINUE EXPLORANDO */
+.guia-explorar {
+    padding: 65px 7%;
+}
+.guia-explorar-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    max-width: 1050px;
+    margin: auto;
+}
+.guia-explorar-card {
+    background: #E8F5FF;
+    border: 1px solid #B8DFF5;
+    padding: 28px;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.guia-explorar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px #00000015;
+}
+.guia-explorar-card h3 {
+    color: #043D66;
+    margin-bottom: 12px;
+}
+.guia-explorar-card p {
+    color: #657D8D;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.guia-explorar-card span {
+    color: #1A8DDF;
+    font-weight: bold;
+}
+/* ==========================================
+   RESPONSIVIDADE — BLUE SKY
+   ========================================== */
+/* TABLETS */
+@media (max-width: 900px) {
+    /* Cabeçalho */
+    .header {
+        padding: 10px 20px;
+    }
+    .logo {
+        width: 180px;
+        max-width: 25%;
+    }
+    nav {
+        gap: 10px;
+        margin-right: 10px;
+    }
+    nav a {
+        padding: 9px 11px;
+        font-size: 14px;
+    }
+    /* Banner */
+    .banner {
+        height: clamp(240px, 42vw, 360px);
+    }
+    /* Cards de tipos de pele */
+    .cartoes-pele {
+        flex-wrap: wrap;
+    }
+    .cartao-pele {
+        flex: 1 1 220px;
+    }
+    /* Texturas */
+    .Texturas,
+    .Texturasd {
+        gap: 16px;
+        padding: 16px;
+    }
+    /* Dicionário da pele */
+    .grupo-dicionario {
+        width: calc(100% - 40px);
+    }
+    .grade-termos,
+    .tabela-ingredientes tbody {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .guia-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .guia-explorar-cards {
+        grid-template-columns: 1fr;
+    }
+    .guia-banner h1 {
+        font-size: 34px;
+    }
+}
+/* CELULARES */
+@media (max-width: 700px) {
+    /* Cabeçalho e menu */
+    .header {
+        position: relative;
+        height: auto;
+        min-height: 0;
+        padding: 10px 14px 16px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .logo {
+        position: static;
+        width: min(190px, 65vw);
+        max-width: 100%;
+        height: 85px;
+        margin: 0 auto;
+    }
+    nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0;
+    }
+    nav a {
+        padding: 8px 10px;
+        font-size: 14px;
+        white-space: normal;
+        text-align: center;
+    }
+    /* Banner da página inicial */
+    .banner {
+        height: clamp(200px, 58vw, 300px);
+    }
+    /* Cards da página inicial */
+    .retangulo-cartas {
+        grid-template-columns: 1fr;
+        width: calc(100% - 30px);
+        gap: 16px;
+    }
+    .cartas {
+        min-height: 0;
+    }
+    .cartas img {
+        height: 190px;
+    }
+    /* Rodapé */
+    .footer {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 12px;
+        text-align: center;
+    }
+    /* Página de contato */
+    .contato-container,
+    .mensagens {
+        width: calc(100% - 30px);
+        margin: 30px auto;
+    }
+    .contato-container > h2 {
+        font-size: clamp(22px, 6vw, 28px);
+    }
+    #contato-form {
+        padding: 18px;
+    }
+    #contato-form input,
+    #contato-form select,
+    #contato-form textarea {
+        min-width: 0;
+        font-size: 16px;
+    }
+    .mensagens h2 {
+        font-size: 21px;
+    }
+    .mensagens h3 {
+        font-size: 21px;
+    }
+    .mensagem-card {
+        padding: 16px;
+    }
+    /* Página de tipos de pele */
+    .bannerT {
+        height: auto;
+        min-height: 300px;
+        padding: 24px 16px;
+        background-size: cover;
+        background-position: center;
+    }
+    .bannerT h1 {
+        font-size: clamp(24px, 7vw, 32px);
+        padding-top: 10px;
+        margin-bottom: 14px;
+        text-align: center;
+    }
+    .bannerT h3 {
+        padding-top: 10px;
+        text-align: center;
+    }
+    .botao {
+        margin-top: 35px;
+    }
+    .identificacao {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 18px;
+    }
+    .identificacao img {
+        width: 100%;
+        max-width: 100%;
+        max-height: 260px;
+        object-fit: contain;
+    }
+    .texto {
+        width: 100%;
+    }
+    .texto h1 {
+        font-size: 25px;
+        margin: 0 0 15px;
+        text-align: center;
+    }
+    .texto h3 {
+        font-size: 15px;
+    }
+    .texto ol {
+        font-size: 16px;
+        margin: 18px 0 0;
+        padding-left: 22px;
+    }
+    .principal-tipos-pele {
+        padding: 30px 15px;
+    }
+    .principal-tipos-pele h2 {
+        font-size: 25px;
+    }
+    .cartoes-pele {
+        flex-direction: column;
+    }
+    .cartao-pele {
+        width: 100%;
+        flex: 1 1 auto;
+    }
+    /* Página de texturas */
+    .Texturas,
+    .Texturasd {
+        flex-direction: column;
+        align-items: stretch;
+        width: calc(100% - 24px);
+        margin: 18px auto;
+        padding: 14px;
+    }
+    .Texturas video,
+    .Texturasd video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        flex: none;
+    }
+    .texturah1ep {
+        width: 100%;
+        min-width: 0;
+    }
+    .texturah1ep h2 {
+        margin: 10px 0;
+        font-size: 22px;
+    }
+    .texturah1ep p {
+        font-size: 15px;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+    }
+    /* Página Sobre Nós */
+    .sobre-apresentacao {
+        flex-direction: column;
+        text-align: center;
+        margin: 25px auto;
+        padding: 20px;
+    }
+    .sobre-texto h1 {
+        font-size: 30px;
+    }
+    .sobre-imagem img {
+        width: 100%;
+        max-width: 300px;
+    }
+    .sobre-missao {
+        padding: 30px 20px;
+    }
+    .sobre-missao h2,
+    .equipe h2 {
+        font-size: 25px;
+    }
+    .integrantes {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 350px;
+        gap: 20px;
+    }
+    /* Página Dicionário da Pele */
+    .dicionario-introducao {
+        margin: 40px auto 35px;
+    }
+    .dicionario-introducao h1 {
+        font-size: 30px;
+    }
+    .dicionario-introducao p {
+        font-size: 14px;
+    }
+    .dicionario-pesquisa {
+        margin-bottom: 45px;
+    }
+    .dicionario-pesquisa h2 {
+        font-size: 21px;
+    }
+    .campo-pesquisa {
+        flex-direction: column;
+    }
+    .campo-pesquisa input,
+    .campo-pesquisa button {
+        width: 100%;
+    }
+    .grupo-dicionario {
+        width: calc(100% - 30px);
+        margin-bottom: 45px;
+    }
+    .titulo-categoria h2 {
+        font-size: 23px;
+    }
+    .grade-termos,
+    .tabela-ingredientes tbody {
+        grid-template-columns: 1fr;
+    }
+    .card-termo {
+        padding: 22px;
+    }
+    .tabela-ingredientes tbody tr {
+        grid-template-columns: 1fr 1fr;
+        padding: 22px;
+    }
+    .dicionario-final {
+        width: calc(100% - 30px);
+        padding: 30px 20px;
+    }
+    .dicionario-final h2 {
+        font-size: 22px;
+    }
+    .guia-banner {
+        min-height: 350px;
+        padding: 35px 25px;
+    }
+    .guia-banner h1 {
+        font-size: 29px;
+    }
+    .guia-banner p {
+        font-size: 14px;
+    }
+    .guia-introducao {
+        margin: 45px auto;
+    }
+    .guia-passos,
+    .guia-tabela,
+    .guia-dicas,
+    .guia-explorar {
+        padding: 45px 20px;
+    }
+    .guia-cards {
+        grid-template-columns: 1fr;
+    }
+    .guia-card img {
+        height: 210px;
+    }
+    .guia-tabela table {
+        min-width: 600px;
+    }
+    .guia-audio-conteudo {
+        padding: 30px 20px;
+    }
+    .guia-audio-conteudo h2 {
+        font-size: 23px;
+    }
+    .guia-dica {
+        align-items: flex-start;
+        gap: 12px;
+        padding: 15px;
+    }
+}
+/* CELULARES ESTREITOS */
+@media (max-width: 380px) {
+    /* Menu */
+    nav {
+        gap: 6px;
+    }
+    nav a {
+        padding: 7px 8px;
+        font-size: 13px;
+    }
+    /* Cards da página inicial */
+    .retangulo-cartas {
+        width: calc(100% - 24px);
+    }
+    .cartas img {
+        height: 160px;
+    }
+    /* Contato */
+    #contato-form {
+        padding: 14px;
+    }
+    /* Tipos de pele */
+    .identificacao {
+        padding: 15px;
+    }
+    /* Sobre Nós */
+    .integrante {
+        padding: 20px 15px;
+    }
+    .integrante img {
+        width: 110px;
+        height: 110px;
+    }
+    /* Catálogo de ingredientes */
+    .ingredientes-catalogo {
+        grid-template-columns: 1fr;
+        margin: 30px auto;
+    }
+    .ingredientes-intro h1 {
+        font-size: 28px;
+    }
+    .ingrediente-card img {
+        height: 220px;
+    }
+    /* Dicionário da pele */
+    .dicionario-introducao h1 {
+        font-size: 26px;
+    }
+    .dicionario-pesquisa h2 {
+        font-size: 19px;
+    }
+    .grupo-dicionario {
+        width: calc(100% - 24px);
+    }
+    .card-termo {
+        padding: 18px;
+    }
+    .tabela-ingredientes tbody tr {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+    .dicionario-final h2 {
+        font-size: 20px;
+    }
+    .guia-banner h1 {
+        font-size: 25px;
+    }
+    .guia-cards {
+        grid-template-columns: 1fr;
+    }
+    .guia-explorar-cards {
+        grid-template-columns: 1fr;
+    }
+    .guia-introducao h2,
+    .guia-passos h2,
+    .guia-tabela h2,
+    .guia-dicas h2,
+    .guia-explorar h2 {
+        font-size: 22px;
+    }
+    .guia-tabela table {
+        min-width: 550px;
+    }
+    .guia-audio-conteudo {
+        padding: 20px 15px;
+    }
+}
+/* ==================================================
+   PÁGINA: AUTOCUIDADO — BLUE SKY
+   ================================================== */
+.pagina-autocuidado {
+    background-color: #FFFFFF;
+    color: #043D66;
+    font-family: 'Lucida Sans', sans-serif;
+}
+.pagina-autocuidado header {
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+    height: auto;
+    padding: 10px 7%;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid #B8DFF5;
+}
+.pagina-autocuidado .logo {
+    position: static;
+    display: block;
+    width: 180px;
+    max-width: 25%;
+    height: 80px;
+    object-fit: contain;
+}
+.pagina-autocuidado nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: auto;
+    margin: 0;
+}
+.pagina-autocuidado nav a {
+    padding: 9px 13px;
+    border: 1px solid #B8DFF5;
+    border-radius: 20px;
+    color: #043D66;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.pagina-autocuidado nav a:hover {
+    background-color: #E8F5FF;
+    color: #1A8DDF;
+}
+/* BANNER */
+.pagina-autocuidado .banner-autocuidado {
+    min-height: 370px;
+    padding: 65px 10%;
+    display: flex;
+    align-items: center;
+    background:
+        url("../img/autocuidado/banner-autocuidado.jpg") center/cover no-repeat;
+}
+.pagina-autocuidado .conteudo-banner {
+    max-width: 650px;
+}
+.pagina-autocuidado .conteudo-banner span,
+.pagina-autocuidado .titulo-secao span {
+    color: #318594;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.pagina-autocuidado .conteudo-banner h1 {
+    margin: 18px 0;
+    color: #043D66;
+    font-size: 42px;
+    line-height: 1.3;
+}
+.pagina-autocuidado .conteudo-banner p {
+    color: #376987;
+    font-size: 15px;
+    line-height: 1.8;
+}
+/* INTRODUÇÃO */
+.pagina-autocuidado .introducao {
+    max-width: 850px;
+    margin: 75px auto;
+    padding: 0 25px;
+    text-align: center;
+}
+.pagina-autocuidado .introducao h2 {
+    margin-bottom: 20px;
+    color: #043D66;
+    font-size: 27px;
+}
+.pagina-autocuidado .introducao p {
+    color: #64869F;
+    font-size: 14px;
+    line-height: 1.9;
+}
+/* TÍTULOS DAS SEÇÕES */
+.pagina-autocuidado .titulo-secao {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.pagina-autocuidado .titulo-secao h2 {
+    margin: 12px 0;
+    color: #043D66;
+    font-size: 28px;
+}
+.pagina-autocuidado .titulo-secao p {
+    color: #64869F;
+    font-size: 14px;
+    line-height: 1.7;
+}
+/* MOMENTOS DO DIA */
+.pagina-autocuidado .momentos {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 25px 70px;
+}
+.pagina-autocuidado .momento-card {
+    display: flex;
+    align-items: center;
+    min-height: 290px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    background-color: #F5FAFE;
+    border-radius: 16px;
+}
+.pagina-autocuidado .momento-card.invertido {
+    flex-direction: row-reverse;
+}
+.pagina-autocuidado .imagem-momento {
+    flex-shrink: 0;
+    width: 45%;
+    height: 320px;
+}
+.pagina-autocuidado .imagem-momento img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.pagina-autocuidado .texto-momento {
+    flex: 1;
+    padding: 35px 40px;
+}
+.pagina-autocuidado .horario {
+    color: #318594;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+.pagina-autocuidado .texto-momento h3 {
+    margin: 15px 0;
+    color: #043D66;
+    font-size: 23px;
+}
+.pagina-autocuidado .texto-momento p {
+    margin-bottom: 18px;
+    color: #64869F;
+    font-size: 13px;
+    line-height: 1.8;
+}
+.pagina-autocuidado .texto-momento ul {
+    padding-left: 20px;
+}
+.pagina-autocuidado .texto-momento li {
+    color: #376987;
+    font-size: 13px;
+    line-height: 2;
+}
+/* HÁBITOS QUE FAZEM A DIFERENÇA */
+.pagina-autocuidado .habitos {
+    padding: 75px 7%;
+    background-color: #F5FAFE;
+}
+.pagina-autocuidado .cards-habitos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1100px;
+    margin: auto;
+}
+.pagina-autocuidado .habito-card {
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px #0000000D;
+    transition: 0.3s;
+}
+.pagina-autocuidado .habito-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px #00000018;
+}
+.pagina-autocuidado .habito-card img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+}
+.pagina-autocuidado .conteudo-habito {
+    padding: 22px;
+}
+.pagina-autocuidado .conteudo-habito h3 {
+    margin-bottom: 12px;
+    color: #043D66;
+    font-size: 17px;
+}
+.pagina-autocuidado .conteudo-habito p {
+    color: #64869F;
+    font-size: 12px;
+    line-height: 1.8;
+}
+/* MENSAGEM FINAL */
+.pagina-autocuidado .lembrete {
+    padding: 75px 20px;
+    background: linear-gradient(120deg, #B8DFF5, #E8F5FF);
+    text-align: center;
+}
+.pagina-autocuidado .conteudo-lembrete {
+    max-width: 700px;
+    margin: auto;
+}
+.pagina-autocuidado .conteudo-lembrete span {
+    color: #318594;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.pagina-autocuidado .conteudo-lembrete h2 {
+    margin: 18px 0;
+    color: #043D66;
+    font-size: 29px;
+}
+.pagina-autocuidado .conteudo-lembrete p {
+    color: #376987;
+    font-size: 14px;
+    line-height: 1.9;
+}
+.pagina-autocuidado footer {
+    padding: 25px;
+    background-color: #DCEFFA;
+    color: #376987;
+    font-size: 13px;
+    text-align: center;
+}
+/* RESPONSIVIDADE DA PÁGINA AUTOCUIDADO */
+@media (max-width: 900px) {
+    .pagina-autocuidado header {
+        padding: 10px 20px;
+    }
+    .pagina-autocuidado .logo {
+        width: 150px;
+        max-width: 22%;
+    }
+    .pagina-autocuidado nav {
+        gap: 8px;
+    }
+    .pagina-autocuidado nav a {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+    .pagina-autocuidado .cards-habitos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .pagina-autocuidado .texto-momento {
+        padding: 25px;
+    }
+    .pagina-autocuidado .imagem-momento {
+        width: 40%;
+    }
+}
+@media (max-width: 700px) {
+    .pagina-autocuidado header {
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 14px 16px;
+    }
+    .pagina-autocuidado .logo {
+        width: min(190px, 65vw);
+        max-width: 100%;
+        height: 85px;
+        margin: 0 auto;
+    }
+    .pagina-autocuidado nav {
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+    }
+    .pagina-autocuidado nav a {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+    .pagina-autocuidado .banner-rotina {
+        min-height: 320px;
+        padding: 55px 7%;
+    }
+    .pagina-autocuidado .conteudo-banner h1 {
+        font-size: 32px;
+    }
+    .pagina-autocuidado .introducao {
+        margin: 55px auto;
+    }
+    .pagina-autocuidado .titulo-secao h2 {
+        font-size: 24px;
+    }
+    .pagina-autocuidado .momento-card,
+    .pagina-autocuidado .momento-card.invertido {
+        flex-direction: column;
+    }
+    .pagina-autocuidado .imagem-momento {
+        width: 100%;
+        height: 230px;
+    }
+    .pagina-autocuidado .texto-momento {
+        width: 100%;
+        padding: 28px;
+    }
+    .pagina-autocuidado .habitos {
+        padding: 55px 6%;
+    }
+}
+@media (max-width: 450px) {
+    .pagina-autocuidado .cards-habitos {
+        grid-template-columns: 1fr;
+    }
+    .pagina-autocuidado .habito-card img {
+        height: 210px;
+    }
+    .pagina-autocuidado .conteudo-banner h1 {
+        font-size: 28px;
+    }
+    .pagina-autocuidado .conteudo-banner p {
+        font-size: 13px;
+    }
+    .pagina-autocuidado .introducao h2 {
+        font-size: 23px;
+    }
+    .pagina-autocuidado .texto-momento h3 {
+        font-size: 20px;
+    }
+    .pagina-autocuidado .conteudo-lembrete h2 {
+        font-size: 24px;
+    }
+}
+@media (max-width: 380px) {
+    .pagina-autocuidado nav {
+        gap: 6px;
+    }
+    .pagina-autocuidado nav a {
+        padding: 7px 8px;
+        font-size: 11px;
+    }
+    .pagina-autocuidado .banner-rotina {
+        padding: 45px 20px;
+    }
+    .pagina-autocuidado .conteudo-banner h1 {
+        font-size: 25px;
+    }
+    .pagina-autocuidado .momentos {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .pagina-autocuidado .texto-momento {
+        padding: 22px 18px;
+    }
+    .pagina-autocuidado .conteudo-habito {
+        padding: 18px;
+    }
+}
