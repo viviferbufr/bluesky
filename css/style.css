@@ -1,4 +1,5 @@
-/* Configuração geral */
+/* CSS do projeto Blue Sky */
+
 * {
     margin: 0;
     padding: 0;
@@ -418,6 +419,23 @@ nav a{
 body{
     font-family: Arial, Helvetica, sans-serif
 }
+.titulo-pagina {
+    text-align: center;
+    padding: 30px 20px;
+    margin-bottom: 25px;
+}
+.titulo-pagina h1 {
+    color: #043D66;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+.titulo-pagina p {
+    color: #78ACD1;
+    font-size: 15px;
+    margin: 0;
+}
 .Texturas {
     display: flex;
     align-items: center;
@@ -490,7 +508,6 @@ body{
     max-width: 400px;
     border-radius: 20px;
 }
-
 
 .sobre-missao {
     background-color: #E8F5FF;
@@ -905,31 +922,6 @@ body {
     background: #1A8DDF;
 }
 
-@media (max-width: 700px) {
-    .dicionario-introducao {
-        margin-top: 40px;
-    }
-    .dicionario-introducao h1 {
-        font-size: 30px;
-    }
-    .dicionario-pesquisa h2 {
-        font-size: 21px;
-    }
-    .grade-termos {
-        grid-template-columns: 1fr;
-    }
-    .tabela-ingredientes tbody {
-        grid-template-columns: 1fr;
-    }
-    .card-termo {
-        padding: 23px;
-    }
-    .dicionario-final {
-        padding: 30px 20px;
-    }
-}
-
-
 .guia-banner {
     min-height: 380px;
     background:
@@ -1176,434 +1168,6 @@ body {
     font-weight: bold;
 }
 
-
-@media (max-width: 900px) {
-    
-    .header {
-        padding: 10px 20px;
-    }
-    .logo {
-        width: 180px;
-        max-width: 25%;
-    }
-    nav {
-        gap: 10px;
-        margin-right: 10px;
-    }
-    nav a {
-        padding: 9px 11px;
-        font-size: 14px;
-    }
-    
-    .banner {
-        height: clamp(240px, 42vw, 360px);
-    }
-    
-    .cartoes-pele {
-        flex-wrap: wrap;
-    }
-    .cartao-pele {
-        flex: 1 1 220px;
-    }
-    
-    .Texturas,
-    .Texturasd {
-        gap: 16px;
-        padding: 16px;
-    }
-    
-    .grupo-dicionario {
-        width: calc(100% - 40px);
-    }
-    .grade-termos,
-    .tabela-ingredientes tbody {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    .guia-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .guia-explorar-cards {
-        grid-template-columns: 1fr;
-    }
-    .guia-banner h1 {
-        font-size: 34px;
-    }
-}
-
-@media (max-width: 700px) {
-    
-    .header {
-        position: relative;
-        height: auto;
-        min-height: 0;
-        padding: 10px 14px 16px;
-        flex-direction: column;
-        gap: 10px;
-    }
-    .logo {
-        position: static;
-        width: min(190px, 65vw);
-        max-width: 100%;
-        height: 85px;
-        margin: 0 auto;
-    }
-    nav {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin: 0;
-    }
-    nav a {
-        padding: 8px 10px;
-        font-size: 14px;
-        white-space: normal;
-        text-align: center;
-    }
-    
-    .banner {
-        height: clamp(200px, 58vw, 300px);
-    }
-    
-    .retangulo-cartas {
-        grid-template-columns: 1fr;
-        width: calc(100% - 30px);
-        gap: 16px;
-    }
-    .cartas {
-        min-height: 0;
-    }
-    .cartas img {
-        height: 190px;
-    }
-    
-    .footer {
-        flex-direction: column;
-        flex-wrap: wrap;
-        gap: 12px;
-        text-align: center;
-    }
-    
-    .contato-container,
-    .mensagens {
-        width: calc(100% - 30px);
-        margin: 30px auto;
-    }
-    .contato-container > h2 {
-        font-size: clamp(22px, 6vw, 28px);
-    }
-    #contato-form {
-        padding: 18px;
-    }
-    #contato-form input,
-    #contato-form select,
-    #contato-form textarea {
-        min-width: 0;
-        font-size: 16px;
-    }
-    .mensagens h2 {
-        font-size: 21px;
-    }
-    .mensagens h3 {
-        font-size: 21px;
-    }
-    .mensagem-card {
-        padding: 16px;
-    }
-    
-    .bannerT {
-        height: auto;
-        min-height: 300px;
-        padding: 24px 16px;
-        background-size: cover;
-        background-position: center;
-    }
-    .bannerT h1 {
-        font-size: clamp(24px, 7vw, 32px);
-        padding-top: 10px;
-        margin-bottom: 14px;
-        text-align: center;
-    }
-    .bannerT h3 {
-        padding-top: 10px;
-        text-align: center;
-    }
-    .botao {
-        margin-top: 35px;
-    }
-    .identificacao {
-        flex-direction: column;
-        height: auto;
-        padding: 20px;
-        gap: 18px;
-    }
-    .identificacao img {
-        width: 100%;
-        max-width: 100%;
-        max-height: 260px;
-        object-fit: contain;
-    }
-    .texto {
-        width: 100%;
-    }
-    .texto h1 {
-        font-size: 25px;
-        margin: 0 0 15px;
-        text-align: center;
-    }
-    .texto h3 {
-        font-size: 15px;
-    }
-    .texto ol {
-        font-size: 16px;
-        margin: 18px 0 0;
-        padding-left: 22px;
-    }
-    .principal-tipos-pele {
-        padding: 30px 15px;
-    }
-    .principal-tipos-pele h2 {
-        font-size: 25px;
-    }
-    .cartoes-pele {
-        flex-direction: column;
-    }
-    .cartao-pele {
-        width: 100%;
-        flex: 1 1 auto;
-    }
-    
-    .Texturas,
-    .Texturasd {
-        flex-direction: column;
-        align-items: stretch;
-        width: calc(100% - 24px);
-        margin: 18px auto;
-        padding: 14px;
-    }
-    .Texturas video,
-    .Texturasd video {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        flex: none;
-    }
-    .texturah1ep {
-        width: 100%;
-        min-width: 0;
-    }
-    .texturah1ep h2 {
-        margin: 10px 0;
-        font-size: 22px;
-    }
-    .texturah1ep p {
-        font-size: 15px;
-        line-height: 1.6;
-        overflow-wrap: anywhere;
-    }
-    
-    .sobre-apresentacao {
-        flex-direction: column;
-        text-align: center;
-        margin: 25px auto;
-        padding: 20px;
-    }
-    .sobre-texto h1 {
-        font-size: 30px;
-    }
-    .sobre-imagem img {
-        width: 100%;
-        max-width: 300px;
-    }
-    .sobre-missao {
-        padding: 30px 20px;
-    }
-    .sobre-missao h2,
-    .equipe h2 {
-        font-size: 25px;
-    }
-    .integrantes {
-        grid-template-columns: 1fr;
-        width: 100%;
-        max-width: 350px;
-        gap: 20px;
-    }
-    
-    .dicionario-introducao {
-        margin: 40px auto 35px;
-    }
-    .dicionario-introducao h1 {
-        font-size: 30px;
-    }
-    .dicionario-introducao p {
-        font-size: 14px;
-    }
-    .dicionario-pesquisa {
-        margin-bottom: 45px;
-    }
-    .dicionario-pesquisa h2 {
-        font-size: 21px;
-    }
-    .campo-pesquisa {
-        flex-direction: column;
-    }
-    .campo-pesquisa input,
-    .campo-pesquisa button {
-        width: 100%;
-    }
-    .grupo-dicionario {
-        width: calc(100% - 30px);
-        margin-bottom: 45px;
-    }
-    .titulo-categoria h2 {
-        font-size: 23px;
-    }
-    .grade-termos,
-    .tabela-ingredientes tbody {
-        grid-template-columns: 1fr;
-    }
-    .card-termo {
-        padding: 22px;
-    }
-    .tabela-ingredientes tbody tr {
-        grid-template-columns: 1fr 1fr;
-        padding: 22px;
-    }
-    .dicionario-final {
-        width: calc(100% - 30px);
-        padding: 30px 20px;
-    }
-    .dicionario-final h2 {
-        font-size: 22px;
-    }
-    .guia-banner {
-        min-height: 350px;
-        padding: 35px 25px;
-    }
-    .guia-banner h1 {
-        font-size: 29px;
-    }
-    .guia-banner p {
-        font-size: 14px;
-    }
-    .guia-introducao {
-        margin: 45px auto;
-    }
-    .guia-passos,
-    .guia-tabela,
-    .guia-dicas,
-    .guia-explorar {
-        padding: 45px 20px;
-    }
-    .guia-cards {
-        grid-template-columns: 1fr;
-    }
-    .guia-card img {
-        height: 210px;
-    }
-    .guia-tabela table {
-        min-width: 600px;
-    }
-    .guia-audio-conteudo {
-        padding: 30px 20px;
-    }
-    .guia-audio-conteudo h2 {
-        font-size: 23px;
-    }
-    .guia-dica {
-        align-items: flex-start;
-        gap: 12px;
-        padding: 15px;
-    }
-}
-
-@media (max-width: 380px) {
-    
-    nav {
-        gap: 6px;
-    }
-    nav a {
-        padding: 7px 8px;
-        font-size: 13px;
-    }
-    
-    .retangulo-cartas {
-        width: calc(100% - 24px);
-    }
-    .cartas img {
-        height: 160px;
-    }
-    
-    #contato-form {
-        padding: 14px;
-    }
-    
-    .identificacao {
-        padding: 15px;
-    }
-    
-    .integrante {
-        padding: 20px 15px;
-    }
-    .integrante img {
-        width: 110px;
-        height: 110px;
-    }
-    
-    .ingredientes-catalogo {
-        grid-template-columns: 1fr;
-        margin: 30px auto;
-    }
-    .ingredientes-intro h1 {
-        font-size: 28px;
-    }
-    .ingrediente-card img {
-        height: 220px;
-    }
-    
-    .dicionario-introducao h1 {
-        font-size: 26px;
-    }
-    .dicionario-pesquisa h2 {
-        font-size: 19px;
-    }
-    .grupo-dicionario {
-        width: calc(100% - 24px);
-    }
-    .card-termo {
-        padding: 18px;
-    }
-    .tabela-ingredientes tbody tr {
-        grid-template-columns: 1fr;
-        padding: 18px;
-    }
-    .dicionario-final h2 {
-        font-size: 20px;
-    }
-    .guia-banner h1 {
-        font-size: 25px;
-    }
-    .guia-cards {
-        grid-template-columns: 1fr;
-    }
-    .guia-explorar-cards {
-        grid-template-columns: 1fr;
-    }
-    .guia-introducao h2,
-    .guia-passos h2,
-    .guia-tabela h2,
-    .guia-dicas h2,
-    .guia-explorar h2 {
-        font-size: 22px;
-    }
-    .guia-tabela table {
-        min-width: 550px;
-    }
-    .guia-audio-conteudo {
-        padding: 20px 15px;
-    }
-}
-
 .pagina-autocuidado {
     background-color: #FFFFFF;
     color: #043D66;
@@ -1848,8 +1412,155 @@ body {
     text-align: center;
 }
 
+.ingredientes-page {
+    width: 100%;
+    color: #043D66;
+}
+
+.ingredientes-intro {
+    padding: 55px 20px;
+    background: linear-gradient(135deg, #E8F5FF, #FFFFFF);
+    text-align: center;
+}
+
+.ingredientes-intro p:first-child {
+    margin-bottom: 12px;
+    color: #1A8DDF;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.ingredientes-intro h1 {
+    margin: 0 auto 15px;
+    color: #043D66;
+    font-size: clamp(28px, 4vw, 38px);
+    line-height: 1.2;
+}
+
+.ingredientes-intro p:last-child {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #52758F;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.ingredientes-catalogo {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    width: min(1100px, calc(100% - 40px));
+    margin: 50px auto;
+}
+
+.ingrediente-card {
+    min-width: 0;
+    overflow: hidden;
+    background: #FFFFFF;
+    border: 1px solid #DCEFFC;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px #043D6610;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ingrediente-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px #043D661A;
+}
+
+.ingrediente-card img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.ingrediente-info {
+    padding: 25px;
+}
+
+.ingrediente-info h2 {
+    margin: 0 0 10px;
+    color: #043D66;
+    font-size: 25px;
+}
+
+.ingrediente-funcao {
+    margin-bottom: 15px;
+    color: #1A8DDF;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.ingrediente-info p:not(.ingrediente-funcao) {
+    color: #52758F;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.ingrediente-onde {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #DCEFFC;
+}
+
+.ingrediente-onde strong {
+    color: #043D66;
+}
+
 @media (max-width: 900px) {
-    .pagina-autocuidado header {
+    
+    .header {
+        padding: 10px 20px;
+    }
+    .logo {
+        width: 180px;
+        max-width: 25%;
+    }
+    nav {
+        gap: 10px;
+        margin-right: 10px;
+    }
+    nav a {
+        padding: 9px 11px;
+        font-size: 14px;
+    }
+    
+    .banner {
+        height: clamp(240px, 42vw, 360px);
+    }
+    
+    .cartoes-pele {
+        flex-wrap: wrap;
+    }
+    .cartao-pele {
+        flex: 1 1 220px;
+    }
+    
+    .Texturas,
+    .Texturasd {
+        gap: 16px;
+        padding: 16px;
+    }
+    
+    .grupo-dicionario {
+        width: calc(100% - 40px);
+    }
+    .grade-termos,
+    .tabela-ingredientes tbody {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .guia-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .guia-explorar-cards {
+        grid-template-columns: 1fr;
+    }
+    .guia-banner h1 {
+        font-size: 34px;
+    }
+        .pagina-autocuidado header {
         padding: 10px 20px;
     }
     .pagina-autocuidado .logo {
@@ -1873,8 +1584,305 @@ body {
         width: 40%;
     }
 }
+
 @media (max-width: 700px) {
-    .pagina-autocuidado header {
+    
+    .header {
+        position: relative;
+        height: auto;
+        min-height: 0;
+        padding: 10px 14px 16px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .logo {
+        position: static;
+        width: min(190px, 65vw);
+        max-width: 100%;
+        height: 85px;
+        margin: 0 auto;
+    }
+    nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0;
+    }
+    nav a {
+        padding: 8px 10px;
+        font-size: 14px;
+        white-space: normal;
+        text-align: center;
+    }
+    
+    .banner {
+        height: clamp(200px, 58vw, 300px);
+    }
+    
+    .retangulo-cartas {
+        grid-template-columns: 1fr;
+        width: calc(100% - 30px);
+        gap: 16px;
+    }
+    .cartas {
+        min-height: 0;
+    }
+    .cartas img {
+        height: 190px;
+    }
+    
+    .footer {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 12px;
+        text-align: center;
+    }
+    
+    .contato-container,
+    .mensagens {
+        width: calc(100% - 30px);
+        margin: 30px auto;
+    }
+    .contato-container > h2 {
+        font-size: clamp(22px, 6vw, 28px);
+    }
+    #contato-form {
+        padding: 18px;
+    }
+    #contato-form input,
+    #contato-form select,
+    #contato-form textarea {
+        min-width: 0;
+        font-size: 16px;
+    }
+    .mensagens h2 {
+        font-size: 21px;
+    }
+    .mensagens h3 {
+        font-size: 21px;
+    }
+    .mensagem-card {
+        padding: 16px;
+    }
+    
+    .bannerT {
+        height: auto;
+        min-height: 300px;
+        padding: 24px 16px;
+        background-size: cover;
+        background-position: center;
+    }
+    .bannerT h1 {
+        font-size: clamp(24px, 7vw, 32px);
+        padding-top: 10px;
+        margin-bottom: 14px;
+        text-align: center;
+    }
+    .bannerT h3 {
+        padding-top: 10px;
+        text-align: center;
+    }
+    .botao {
+        margin-top: 35px;
+    }
+    .identificacao {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 18px;
+    }
+    .identificacao img {
+        width: 100%;
+        max-width: 100%;
+        max-height: 260px;
+        object-fit: contain;
+    }
+    .texto {
+        width: 100%;
+    }
+    .texto h1 {
+        font-size: 25px;
+        margin: 0 0 15px;
+        text-align: center;
+    }
+    .texto h3 {
+        font-size: 15px;
+    }
+    .texto ol {
+        font-size: 16px;
+        margin: 18px 0 0;
+        padding-left: 22px;
+    }
+    .principal-tipos-pele {
+        padding: 30px 15px;
+    }
+    .principal-tipos-pele h2 {
+        font-size: 25px;
+    }
+    .cartoes-pele {
+        flex-direction: column;
+    }
+    .cartao-pele {
+        width: 100%;
+        flex: 1 1 auto;
+    }
+    
+    .Texturas,
+    .Texturasd {
+        flex-direction: column;
+        align-items: stretch;
+        width: calc(100% - 24px);
+        margin: 18px auto;
+        padding: 14px;
+    }
+    .Texturas video,
+    .Texturasd video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        flex: none;
+    }
+    .texturah1ep {
+        width: 100%;
+        min-width: 0;
+    }
+    .texturah1ep h2 {
+        margin: 10px 0;
+        font-size: 22px;
+    }
+    .texturah1ep p {
+        font-size: 15px;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+    }
+    
+    .sobre-apresentacao {
+        flex-direction: column;
+        text-align: center;
+        margin: 25px auto;
+        padding: 20px;
+    }
+    .sobre-texto h1 {
+        font-size: 30px;
+    }
+    .sobre-imagem img {
+        width: 100%;
+        max-width: 300px;
+    }
+    .sobre-missao {
+        padding: 30px 20px;
+    }
+    .sobre-missao h2,
+    .equipe h2 {
+        font-size: 25px;
+    }
+    .integrantes {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 350px;
+        gap: 20px;
+    }
+    .dicionario-introducao {
+        margin: 40px auto 35px;
+    }
+    .dicionario-introducao h1 {
+        font-size: 30px;
+    }
+    .dicionario-introducao p {
+        font-size: 14px;
+    }
+    .dicionario-pesquisa {
+        margin-bottom: 45px;
+    }
+    .dicionario-pesquisa h2 {
+        font-size: 21px;
+    }
+    .campo-pesquisa {
+        flex-direction: column;
+    }
+    .grade-termos {
+        grid-template-columns: 1fr;
+    }
+    .tabela-ingredientes tbody {
+        grid-template-columns: 1fr;
+    }
+    .card-termo {
+        padding: 23px;
+    }
+    .dicionario-final {
+        padding: 30px 20px;
+    }
+
+    .campo-pesquisa input,
+    .campo-pesquisa button {
+        width: 100%;
+    }
+    .grupo-dicionario {
+        width: calc(100% - 30px);
+        margin-bottom: 45px;
+    }
+    .titulo-categoria h2 {
+        font-size: 23px;
+    }
+    .grade-termos,
+    .tabela-ingredientes tbody {
+        grid-template-columns: 1fr;
+    }
+    .card-termo {
+        padding: 22px;
+    }
+    .tabela-ingredientes tbody tr {
+        grid-template-columns: 1fr 1fr;
+        padding: 22px;
+    }
+    .dicionario-final {
+        width: calc(100% - 30px);
+        padding: 30px 20px;
+    }
+    .dicionario-final h2 {
+        font-size: 22px;
+    }
+    .guia-banner {
+        min-height: 350px;
+        padding: 35px 25px;
+    }
+    .guia-banner h1 {
+        font-size: 29px;
+    }
+    .guia-banner p {
+        font-size: 14px;
+    }
+    .guia-introducao {
+        margin: 45px auto;
+    }
+    .guia-passos,
+    .guia-tabela,
+    .guia-dicas,
+    .guia-explorar {
+        padding: 45px 20px;
+    }
+    .guia-cards {
+        grid-template-columns: 1fr;
+    }
+    .guia-card img {
+        height: 210px;
+    }
+    .guia-tabela table {
+        min-width: 600px;
+    }
+    .guia-audio-conteudo {
+        padding: 30px 20px;
+    }
+    .guia-audio-conteudo h2 {
+        font-size: 23px;
+    }
+    .guia-dica {
+        align-items: flex-start;
+        gap: 12px;
+        padding: 15px;
+    }
+        .pagina-autocuidado header {
         justify-content: center;
         flex-direction: column;
         gap: 10px;
@@ -1923,32 +1931,116 @@ body {
     .pagina-autocuidado .habitos {
         padding: 55px 6%;
     }
-}
-@media (max-width: 450px) {
-    .pagina-autocuidado .cards-habitos {
+    .ingredientes-catalogo {
         grid-template-columns: 1fr;
+        width: calc(100% - 30px);
+        gap: 20px;
+        margin: 30px auto;
     }
-    .pagina-autocuidado .habito-card img {
-        height: 210px;
+
+    .ingredientes-intro {
+        padding: 40px 18px;
     }
-    .pagina-autocuidado .conteudo-banner h1 {
+
+    .ingredientes-intro h1 {
         font-size: 28px;
     }
-    .pagina-autocuidado .conteudo-banner p {
-        font-size: 13px;
+
+    .ingrediente-card img {
+        height: 220px;
     }
-    .pagina-autocuidado .introducao h2 {
-        font-size: 23px;
-    }
-    .pagina-autocuidado .texto-momento h3 {
-        font-size: 20px;
-    }
-    .pagina-autocuidado .conteudo-lembrete h2 {
-        font-size: 24px;
+
+    .ingrediente-info {
+        padding: 22px;
     }
 }
+
 @media (max-width: 380px) {
-    .pagina-autocuidado nav {
+    
+    nav {
+        gap: 6px;
+    }
+    nav a {
+        padding: 7px 8px;
+        font-size: 13px;
+    }
+    
+    .retangulo-cartas {
+        width: calc(100% - 24px);
+    }
+    .cartas img {
+        height: 160px;
+    }
+    
+    #contato-form {
+        padding: 14px;
+    }
+    
+    .identificacao {
+        padding: 15px;
+    }
+    
+    .integrante {
+        padding: 20px 15px;
+    }
+    .integrante img {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .ingredientes-catalogo {
+        grid-template-columns: 1fr;
+        margin: 30px auto;
+    }
+    .ingredientes-intro h1 {
+        font-size: 28px;
+    }
+    .ingrediente-card img {
+        height: 220px;
+    }
+    
+    .dicionario-introducao h1 {
+        font-size: 26px;
+    }
+    .dicionario-pesquisa h2 {
+        font-size: 19px;
+    }
+    .grupo-dicionario {
+        width: calc(100% - 24px);
+    }
+    .card-termo {
+        padding: 18px;
+    }
+    .tabela-ingredientes tbody tr {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+    .dicionario-final h2 {
+        font-size: 20px;
+    }
+    .guia-banner h1 {
+        font-size: 25px;
+    }
+    .guia-cards {
+        grid-template-columns: 1fr;
+    }
+    .guia-explorar-cards {
+        grid-template-columns: 1fr;
+    }
+    .guia-introducao h2,
+    .guia-passos h2,
+    .guia-tabela h2,
+    .guia-dicas h2,
+    .guia-explorar h2 {
+        font-size: 22px;
+    }
+    .guia-tabela table {
+        min-width: 550px;
+    }
+    .guia-audio-conteudo {
+        padding: 20px 15px;
+    }
+        .pagina-autocuidado nav {
         gap: 6px;
     }
     .pagina-autocuidado nav a {
