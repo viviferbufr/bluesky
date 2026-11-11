@@ -52,3 +52,5 @@ Projeto desenvolvido por estudantes do curso de **Análise e Desenvolvimento de 
 ## Objetivo acadêmico
 
 O Blue Sky foi desenvolvido com o propósito de aplicar na prática os conhecimentos adquiridos durante o curso, envolvendo estruturação de páginas web, estilização, responsividade e programação com JavaScript.
+
+Link para acesso ao Site: https://viviferbufr.github.io/bluesky/index.html
