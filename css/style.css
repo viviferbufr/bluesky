@@ -32,13 +32,15 @@ nav {
     width: 100%;
     margin-right: 40px;
 }
-nav a{
+nav a:hover{
     font-family: Arial, sans-serif;
     text-decoration: none;
     color: #75BCE8;
     border: 2px solid #b8dff5;
     padding: 10px 15px;
     border-radius: 20px;
+    color: #1A8DDF;
+    transform: scale(1.05);
 }
 
 .banner{
