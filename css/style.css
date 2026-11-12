@@ -37,19 +37,13 @@ nav a {
     display: inline-block;
     font-family: Arial, sans-serif;
     text-decoration: none;
-    padding: 10px 15px;
-    border: 2px solid transparent;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    color: #043D66;
+    color: #75BCE8;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
     color: #1A8DDF;
-    border: 2px solid #B8DFF5;
-    transform: scale(1.05);
 }
-
 .banner{
     width: 100%;
     height: 400px;
