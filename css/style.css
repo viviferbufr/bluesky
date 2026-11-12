@@ -34,17 +34,19 @@ nav {
 }
 
 nav a {
+    display: inline-block;
     font-family: Arial, sans-serif;
     text-decoration: none;
     padding: 10px 15px;
     border: 2px solid transparent;
     border-radius: 20px;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    color: #043D66;
 }
 
 nav a:hover {
     color: #1A8DDF;
-    border: 2px solid #b8dff5;
+    border: 2px solid #B8DFF5;
     transform: scale(1.05);
 }
 
