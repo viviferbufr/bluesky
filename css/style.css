@@ -24,21 +24,13 @@
     max-width: 30%;
     object-fit: contain;
 }
-nav {
+nav a {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 20px;
     width: 100%;
     margin-right: 40px;
-}
-
-nav a {
-    display: inline-block;
-    font-family: Arial, sans-serif;
-    text-decoration: none;
-    color: #75BCE8;
-    transition: color 0.3s ease;
 }
 
 nav a:hover {
