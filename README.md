@@ -18,6 +18,7 @@ O site conta com diferentes páginas e conteúdos:
 - **Dicionário da Pele:** consulta de termos relacionados ao universo do skincare.
 - **Sobre Nós:** apresentação dos desenvolvedores e do projeto.
 - **Contato:** formulário para envio de mensagens.
+- **SBD:** site externo do Sociedade Brasileira de Dermatologia.
 
 ## Tecnologias utilizadas
 
